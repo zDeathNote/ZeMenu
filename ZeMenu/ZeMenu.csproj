@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{19E45710-94C9-463E-9C5D-5049FA95D6E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZeMenu</RootNamespace>
+    <AssemblyName>ZeMenu.net</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\CommandAbout.cs" />
+    <Compile Include="Commands\CommandGiveMoney.cs" />
+    <Compile Include="Commands\CommandPedDensity.cs" />
+    <Compile Include="Commands\CommandPlayerGeneral.cs" />
+    <Compile Include="Commands\CommandRemoveAllItems.cs" />
+    <Compile Include="Commands\CommandSpawnVehicle.cs" />
+    <Compile Include="Commands\CommandTeleport.cs" />
+    <Compile Include="Commands\CommandVehicleColor.cs" />
+    <Compile Include="Commands\CommandVehicleDensity.cs" />
+    <Compile Include="Commands\CommandVehicleDoor.cs" />
+    <Compile Include="Commands\CommandVehicleGeneral.cs" />
+    <Compile Include="Menus\Items\SpinnerMenuItem.cs" />
+    <Compile Include="States\CommandStates.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\CommandGiveItem.cs" />
+    <Compile Include="Commands\CommandTime.cs" />
+    <Compile Include="Commands\CommandWantedLevel.cs" />
+    <Compile Include="Commands\CommandWeather.cs" />
+    <Compile Include="States\State.cs" />
+    <Compile Include="States\StateNoReload.cs" />
+    <Compile Include="States\StateInfiniteAmmo.cs" />
+    <Compile Include="States\StateIsInvincible.cs" />
+    <Compile Include="States\StateIsSmoking.cs" />
+    <Compile Include="States\StateIsVehicleInvincible.cs" />
+    <Compile Include="States\StateVehicleNeverDirty.cs" />
+    <Compile Include="States\StateWantedIgnored.cs" />
+    <Compile Include="Menus\Items\MenuItem.cs" />
+    <Compile Include="Menus\Items\SpriteMenuItem.cs" />
+    <Compile Include="Menus\Items\TextItem.cs" />
+    <Compile Include="Menus\Items\ToggleItem.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\MenuBuilder.cs" />
+    <Compile Include="Menus\MenuController.cs" />
+    <Compile Include="Util\Animations.cs" />
+    <Compile Include="Util\VehicleList.cs" />
+    <Compile Include="ZeMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="States\CommandStateHandler.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
